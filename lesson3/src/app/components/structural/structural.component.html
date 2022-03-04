@@ -47,7 +47,7 @@
 <div class="form-group">
     <label for="">Age: {{age}}</label>
     <input [(ngModel)]="age" type="text" class="form-control" id="" placeholder="Input field">
-    
+
 
     <ng-container *ngIf="age >18;else kid">
         <h3>Adult</h3>
@@ -56,5 +56,56 @@
     <ng-template #kid>
         <h3>Kid</h3>
     </ng-template>
-    
+
 </div>
+
+
+<!-- for ngFor -->
+<hr>
+<h3>Show data to list</h3>
+<ul class="list-group" *ngFor="let item of names">
+    <li class="list-group-item">{{item}}</li>
+</ul>
+
+
+<hr>
+<h3>show data in table</h3>
+<ng-container *ngIf="products.length>0;else noProduct">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of products, 
+                let i = index,
+                let f = first,
+                let e = even,
+                trackBy:myTrackByFunction
+                "
+                [style.background]="e?'gray':''"
+            >
+                <td>{{i + 1}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}vnd</td>
+                <td><img src="{{item.image}}" alt="" height="50"></td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
+
+<ng-template #noProduct>
+    <h3>No Products in stock</h3>
+</ng-template>
+
+
+
+
+
+<button type="button" class="btn btn-danger" (click)="onLoadData()">Load API</button>
+<br>
+<button type="button" class="btn btn-normal" (click)="onBackToLocal()">Local</button>

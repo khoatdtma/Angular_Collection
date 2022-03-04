@@ -15,9 +15,58 @@ export class StructuralComponent implements OnInit {
 
   public coffeeType = '';
 
+  public names :string[]=['HCM','Kiev','Berlin','London'];
   
+  public products = [
+    {
+      id:1,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjAOekGegQ5FdH0PV2UQtANo21clXIGOVmg&usqp=CAU',
+      name:'iphone 6',
+      price:123
+    },
+    {
+      id:2,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjAOekGegQ5FdH0PV2UQtANo21clXIGOVmg&usqp=CAU',
+      name:'iphone 8',
+      price:345
+    },
+  ]
 
+  public productsFromAPI = [
+    {
+      id:1,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjAOekGegQ5FdH0PV2UQtANo21clXIGOVmg&usqp=CAU',
+      name:'iphone 6',
+      price:123
+    },
+    {
+      id:2,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjAOekGegQ5FdH0PV2UQtANo21clXIGOVmg&usqp=CAU',
+      name:'iphone 8',
+      price:345
+    },
+    {
+      id:3,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjAOekGegQ5FdH0PV2UQtANo21clXIGOVmg&usqp=CAU',
+      name:'iphone 7',
+      price:456
+    },
+    {
+      id:4,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjAOekGegQ5FdH0PV2UQtANo21clXIGOVmg&usqp=CAU',
+      name:'iphone 7',
+      price:456
+    },
+    {
+      id:5,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjAOekGegQ5FdH0PV2UQtANo21clXIGOVmg&usqp=CAU',
+      name:'iphone 7',
+      price:456
+    },
 
+  ]
+
+  public temp:any;
 
   onClickCoffee(event:Event){
     var x = (<HTMLInputElement>event.target);
@@ -31,6 +80,20 @@ export class StructuralComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onLoadData(){
+    if(this.temp==null){
+      this.temp = this.products;
+    }
+    this.products = this.productsFromAPI;
+  }
+  onBackToLocal(){
+    this.products = this.temp;
+  }
+
+  myTrackByFunction(index:any , item:any){
+    return item.id;
   }
 
 }
