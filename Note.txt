@@ -44,3 +44,9 @@ type
 *ngIf="isShow"		--> check condition to show
 
 ngTemplate + ngIf else
+
+
+ngFor --> track by
+	table show a sub list
+	click button --> show full list
+	--> track by : help skip sublist--> increase perfomance
