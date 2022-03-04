@@ -1,0 +1,28 @@
+<h3>component-to-view</h3>
+<p>Full name : {{name}}</p>
+<p>Age: {{age}}</p>
+<p>Is married:  {{isMarried}}</p>
+<p>life status:  {{ isMarried ? 'ended' : 'Awesome'}}</p>
+<hr>
+
+<!-- does not work -->
+<p>Full name ----- : {{ user.name }}</p>
+
+<!-- <p>info : {{showInfo()}}</p> -->
+
+<img src="{{imgLink}}" width="200">
+
+
+<!-- property binding -->
+<img [src]="imgLink" [width]="imgWidth" [alt]="'this is a pink fish picture'">
+<img bind-src="imgLink" [width]="imgWidth" [alt]="'this is a pink fish picture'">
+
+
+ <input type="text" name="input" id="inputinput" class="form-control" [value]="name" required="required" pattern="" title="">
+
+
+<button type="button" class="btn btn-danger" [disabled]="isDisable">Login</button>
+
+
+<!-- attribute binding  -->
+

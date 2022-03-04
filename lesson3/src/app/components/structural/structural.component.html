@@ -1,0 +1,60 @@
+<!-- checkbox for show hide input and lable -->
+<div class="checkbox">
+    <label>
+        <input type="checkbox" value="" [(ngModel)]="isShow">
+        Checkbox
+    </label>
+</div>
+
+<div class="form-group" *ngIf="isShow">
+    <label for="">{{name}}</label>
+    <input [(ngModel)]="name" type="text" class="form-control" id="" placeholder="Input field">
+</div>
+
+<hr>
+
+
+<!-- button for show hide input and lable -->
+<div *ngIf="isShowAge" class="form-group">
+    <label for="">age = {{age}}</label>
+    <input [(ngModel)]="age" type="text" class="form-control" id="" placeholder="Input field">
+</div>
+<button type="submit" class="btn btn-danger" (click)="onToggle($event)">Toggle</button>
+
+
+<!-- ng-model for radio button , handled by click event -->
+<hr>
+<h4>Choose your favourite coffee</h4>
+<div class="radio">
+    <label>
+        <input type="radio" name="carrer" (click)="onClickCoffee($event)">
+        Robusta
+    </label><br>
+    <label>
+        <input type="radio" name="carrer" (click)="onClickCoffee($event)">
+        Arabica
+    </label><br>
+    <label>
+        <input type="radio" name="carrer" (click)="onClickCoffee($event)">
+        Mixed
+    </label>
+</div>
+
+<h4>your choice is: {{coffeeType}}</h4>
+
+
+<hr>
+<div class="form-group">
+    <label for="">Age: {{age}}</label>
+    <input [(ngModel)]="age" type="text" class="form-control" id="" placeholder="Input field">
+    
+
+    <ng-container *ngIf="age >18;else kid">
+        <h3>Adult</h3>
+    </ng-container>
+
+    <ng-template #kid>
+        <h3>Kid</h3>
+    </ng-template>
+    
+</div>

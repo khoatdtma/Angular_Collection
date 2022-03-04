@@ -1,0 +1,18 @@
+<h3>{{title}}</h3>
+
+<form action="">
+    <div class="form-group">
+        <label for="">Name: {{name}} </label>
+        <input [(ngModel)]="name" 
+            [ngModelOptions]="{standalone: true}"
+            type="text" class="form-control" id="" placeholder="Input field">
+    </div>
+
+    <h3>Gender: {{gender==0?'men': 'women'}}</h3>
+    <select 
+        [ngModelOptions]="{standalone: true}"
+        name="gender" id="gender" [(ngModel)]="gender">
+        <option value="0">Man</option>
+        <option value="1">Women</option>
+    </select>
+</form>

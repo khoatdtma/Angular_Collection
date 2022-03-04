@@ -1,0 +1,22 @@
+install node.js
+node -v		-->check version
+
+install npm package
+npm -v
+
+install angular cli - commandline interface
+npm install -g @angular/cli
+
+bs3- 	--> for bootstrap 3
+
+------------data binding---------------
+ng g c componentname	--> create new component
+
+component to view:
+	1-interpolation
+	2-property
+	3-attributes
+	4-class
+	5-style
+
+

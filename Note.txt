@@ -1,0 +1,46 @@
+install node.js
+node -v		-->check version
+
+install npm package
+npm -v
+
+install angular cli - commandline interface
+npm install -g @angular/cli
+
+bs3-cdn 	--> for bootstrap 3
+
+------------data binding---------------
+ng g c componentname	--> create new component
+
+component to view:
+	1-interpolation
+	2-property
+	3-attributes
+	4-class
+	5-style
+
+
+---------------two way binding-------------
+ng model: formsmodule import tp app.module
+this is benefit of angular
+ngModel in form must be
+	standalone
+	or different attributes
+
+---------------directive---------------------
+directive is extended attributes of HTML
+defined by Angular
+type
+	component
+	attribute
+		ngCLASS
+		ngSTYLE
+	structural-->for add /remove HTML element
+		ngIF
+		ngFOR
+		ngSWITCH
+
+[(ngModel)]="name"	--> binding
+*ngIf="isShow"		--> check condition to show
+
+ngTemplate + ngIf else

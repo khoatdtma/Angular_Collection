@@ -1,0 +1,25 @@
+<h2>{{title}}</h2>
+
+<button type="button" class="btn btn-info" (click)="onClickAction($event)" id="my button">Click here</button>
+
+<button type="button" class="btn btn-info" ((dblclick))="onDblClickAction($event)" id="my button 2">Doouble CLick
+    here</button>   
+
+<button type="button" class="btn btn-info danger" (click)="onIncrease($event)" id="my button">increase count</button>
+<h2>{{count}}</h2>
+
+<hr>
+
+
+
+<form action="">
+    <h3>Username : {{username}}</h3>
+    <div class="form-group">
+        <input type="text" class="form-control" id="" placeholder="Input field" (keyup)="onKeyUp($event)">
+    </div>
+    <h3>Final name : {{name}}</h3>
+    <div class="form-group">
+        <input type="text" class="form-control" id="" placeholder="Input field" (keyup.enter)="onKeyUpEnter($event)">
+    </div>
+</form>
+
