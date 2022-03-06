@@ -50,3 +50,8 @@ ngFor --> track by
 	table show a sub list
 	click button --> show full list
 	--> track by : help skip sublist--> increase perfomance
+
+
+----attributes directive 
+use for add/remove style or class in css
+--ngClass
