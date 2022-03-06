@@ -56,3 +56,22 @@ ngFor --> track by
 use for add/remove style or class in css
 --ngClass
 --ngStyle
+
+
+-------------------input - output----------------------------------
+Components Interaction
+how to transfer data between components? (from parent to child)
+
+
+
+
+
+
+
+
+
+
+============================QUESTION===============================
+how to know if bootstrap is added into project
+
+
