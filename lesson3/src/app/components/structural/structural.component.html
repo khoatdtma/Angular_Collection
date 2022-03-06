@@ -86,9 +86,7 @@
                 let f = first,
                 let e = even,
                 trackBy:myTrackByFunction
-                "
-                [style.background]="e?'gray':''"
-            >
+                " [style.background]="e?'gray':''">
                 <td>{{i + 1}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.price}}vnd</td>
@@ -109,3 +107,39 @@
 <button type="button" class="btn btn-danger" (click)="onLoadData()">Load API</button>
 <br>
 <button type="button" class="btn btn-normal" (click)="onBackToLocal()">Local</button>
+
+
+
+<!-- ng switch case -->
+<h2>Define color of if</h2>
+<h3>List users - Using if </h3>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users">
+        <span *ngIf="user.country==='England'" class="text-danger">
+            {{user.name}} - {{user.country}}
+        </span>
+        <span *ngIf="user.country==='USA'">
+            {{user.name}} - {{user.country}}
+        </span>
+        <span *ngIf="user.country==='Holland'" class="text-primary">
+            {{user.name}} - {{user.country}}
+        </span>
+    </li>
+</ul>
+
+
+<h3>List users - use Switch case </h3>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users" [ngSwitch]="user.country">
+        <span *ngSwitchCase="'England'" class="text-danger">
+            {{user.name}} - {{user.country}}
+        </span>
+        <span *ngSwitchCase="'USA'" class="text-primary">
+            {{user.name}} - {{user.country}}
+        </span>
+        <span *ngSwitchDefault>
+            {{user.name}} - {{user.country}}
+        </span>
+    </li>
+</ul>

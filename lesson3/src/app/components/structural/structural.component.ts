@@ -68,6 +68,31 @@ export class StructuralComponent implements OnInit {
 
   public temp:any;
 
+  public users : any[] = [
+    {
+      name:'Lynq',
+      country:'England'
+    },
+    {
+      name:'Mark',
+      country:'USA'
+    },
+    {
+      name:'Steven',
+      country:'England'
+    },
+    {
+      name:'Joss',
+      country:'Holland'
+    },
+    {
+      name:'Manolito',
+      country:'England'
+    },
+  ]
+
+
+
   onClickCoffee(event:Event){
     var x = (<HTMLInputElement>event.target);
     this.coffeeType = <string>x.parentElement?.textContent;
