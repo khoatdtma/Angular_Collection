@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-child',
@@ -13,19 +14,29 @@ export class ChildComponent implements OnInit {
   // @Input('name') name: string='';
 
   //2nd way --> add by setter
-  private  _name :string='';
-  
+  private _name: string = '';
+
   @Input()
-  set name (name : string){
+  set name(name: string) {
     this._name = name;
 
   }
-  get name(){
+  get name() {
     return this._name;
   }
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  // testing output data to parent component
+  // child event = onHandleFullname
+  @Output() onHandleFullname = new EventEmitter<string>();
+
+  onSend(value: string) {
+    this.onHandleFullname.emit(value);
+  }
+
+
 
 }

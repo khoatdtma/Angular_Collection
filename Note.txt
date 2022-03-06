@@ -62,7 +62,17 @@ use for add/remove style or class in css
 Components Interaction
 how to transfer data between components? (from parent to child)
 
+parent --> child : @input
+	parent.html use [foo_in_child]="foo_in_parent.ts"
+	import input at child .ts
+	child.ts can use setter to set prop, and getter to show it in html
+	
 
+
+child --> parent:
+	inmport Output, EventEmitter
+	child use ()
+	
 
 
 
@@ -72,6 +82,7 @@ how to transfer data between components? (from parent to child)
 
 
 ============================QUESTION===============================
-how to know if bootstrap is added into project
+how to know if bootstrap is added into project?
+
 
 

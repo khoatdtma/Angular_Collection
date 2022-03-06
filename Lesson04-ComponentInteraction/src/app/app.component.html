@@ -1,3 +1,7 @@
+<h3>
+  Fullname from child compoennt: {{fullname}}
+</h3>
+
 
 <div class="container" [style.magin.px]="10">
   
@@ -7,7 +11,8 @@
           [married]="isMarried"
           [age]="age"
           [name]="'Khoatd'"
-      ></app-child>      
+          (onHandleFullname)="setFullname($event)"
+      ></app-child>       
     </div>
     
     <div class="row">
