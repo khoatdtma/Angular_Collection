@@ -14,18 +14,25 @@ export class AttributeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onToggle(){
+  onToggle() {
     this.isSpecial = !this.isSpecial;
   }
 
-  onToggle2(){
+  onToggle2() {
     this.isSpecial2 = !this.isSpecial2;
   }
-  setClasses(){
+  setClasses() {
     return {
       'border-blue': this.isSpecial2,
       'cl-red': this.isSpecial2,
-      'pd-10':this.isSpecial2
+      'pd-10': this.isSpecial2
+    }
+  }
+  setStyle(){
+   return {
+      'border':this.isSpecial?'3px yellow solid':'',
+      'padding':'20px',
+      'color':this.isSpecial?'red':'blue'
   }
   }
 }

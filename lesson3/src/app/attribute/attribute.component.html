@@ -1,3 +1,6 @@
+<hr>
+<h2>Testing ng class </h2>
+<hr>
 <h4 [class.pd-10]="true"
     [class.cl-red]="true"
     [class.border-blue]="true">
@@ -30,3 +33,12 @@
 </h4>
 <button type="button" class="btn btn-default" (click)="onToggle2()" >Toggle</button>
 
+
+<!-- style class -->
+<hr>
+<h2>Testing ng style </h2>
+<hr>
+<h4 [ngStyle]="setStyle()">
+    learning ng style
+</h4>
+<button type="button" class="btn btn-default" (click)="onToggle()" >Toggle</button>

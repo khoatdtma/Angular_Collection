@@ -55,3 +55,4 @@ ngFor --> track by
 ----attributes directive 
 use for add/remove style or class in css
 --ngClass
+--ngStyle
