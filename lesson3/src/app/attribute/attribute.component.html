@@ -1,0 +1,44 @@
+<hr>
+<h2>Testing ng class </h2>
+<hr>
+<h4 [class.pd-10]="true"
+    [class.cl-red]="true"
+    [class.border-blue]="true">
+    Add class by class binding
+</h4>
+
+<!-- use ngclass -->
+<hr>
+<h4  [ngClass]="['pd-10','cl-red','border-blue']"
+>
+    Add class by ngCLASS without condition
+</h4>
+
+<!-- use ngclass  with condition-->
+<hr>
+<h4 [ngClass]="{
+    'border-blue': isSpecial,
+    'cl-red': isSpecial,
+    'pd-10':isSpecial
+}">
+    Add class by ngCLASS has condition
+</h4>
+<button type="button" class="btn btn-default" (click)="onToggle()" >Toggle</button>
+
+
+<!-- use ngclass  with condition, move condition to type script-->
+<hr>
+<h4 [ngClass]="setClasses()">
+    Add class by ngCLASS has condition
+</h4>
+<button type="button" class="btn btn-default" (click)="onToggle2()" >Toggle</button>
+
+
+<!-- style class -->
+<hr>
+<h2>Testing ng style </h2>
+<hr>
+<h4 [ngStyle]="setStyle()">
+    learning ng style
+</h4>
+<button type="button" class="btn btn-default" (click)="onToggle()" >Toggle</button>

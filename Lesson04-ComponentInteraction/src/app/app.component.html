@@ -1,0 +1,29 @@
+<h3>
+  Fullname from child compoennt: {{fullname}}
+</h3>
+
+
+<div class="container" [style.magin.px]="10">
+  
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <app-child 
+          [married]="isMarried"
+          [age]="age"
+          [name]="'Khoatd'"
+          (onHandleFullname)="setFullname($event)"
+      ></app-child>       
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <app-user-list
+          [users]="users"
+        >
+        </app-user-list>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>

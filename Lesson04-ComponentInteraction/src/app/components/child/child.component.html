@@ -1,0 +1,23 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Child Compoent</h3>
+    </div>
+    <div class="panel-body">
+        <h3>Married: {{isMarried?'Yes':'Not yet'}}</h3>
+        <h3>Age: {{ageChild}}</h3>
+        <h3>name: {{name}}</h3>
+    </div>
+
+    <!--send data to parent component-->
+    <hr>
+    <form>
+        <div class="form-group">
+            <label for="">Fullname</label>
+            <input type="text" class="form-control" id="" #newItem>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="onSend(newItem.value)">
+            Send
+        </button>
+    </form>
+
+</div>
